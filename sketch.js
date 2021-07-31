@@ -1,7 +1,7 @@
 var bow , arrow,  background, redB, pinkB, greenB ,blueB ,arrowGroup;
 var bowImage, arrowImage, green_balloonImage, red_balloonImage, pink_balloonImage ,blue_balloonImage, backgroundImage;
 
-var score =0;
+
 function preload(){
   
   backgroundImage = loadImage("background0.png");
@@ -72,38 +72,6 @@ function draw() {
       pinkBalloon();
     }
   }
-  
-  if (arrowGroup.isTouching(redB)) {
-  redB.destroyEach();
-  arrowGroup.destroyEach();
-    score=score+1;
-}
-
-
-
-
- if (arrowGroup.isTouching(greenB)) {
-  greenB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+3;
-}
-
-
-
- if (arrowGroup.isTouching(blueB)) {
-  blueB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+2;
-}
-
-
-
-if (arrowGroup.isTouching(pinkB)) {
-  pinkB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+1;
-}
-
   
   drawSprites();
   text("Score: "+ score, 300,50);
